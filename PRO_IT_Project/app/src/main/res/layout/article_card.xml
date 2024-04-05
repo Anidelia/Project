@@ -1,0 +1,68 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Обложка статьи (если есть) -->
+        <ImageView
+            android:id="@+id/articleImageView"
+            android:layout_width="333dp"
+            android:layout_height="178dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/obl"
+            android:visibility="visible" /> <!-- Примечание: Установите visibility в visible, если у вас есть изображение для обложки статьи -->
+
+        <!-- Заголовок статьи -->
+        <TextView
+            android:id="@+id/articleTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="start"
+            android:text="Article Title"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Автор статьи -->
+        <TextView
+            android:id="@+id/articleAuthorTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="start"
+            android:text="Author"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <!-- Дата публикации статьи -->
+        <TextView
+            android:id="@+id/articlePublishDateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="start"
+            android:text="Publish Date"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <!-- Кнопка для сохранения в избранное -->
+        <ImageButton
+            android:id="@+id/addToFavoritesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/baseline_bookmark_24" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

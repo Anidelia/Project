@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Окно поиска с фильтрами -->
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search"
+        android:padding="16dp" />
+
+    <!-- Выбор среди 3 вариантов -->
+    <RadioGroup
+        android:id="@+id/filterRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchEditText"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/showAllRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show All" />
+
+        <RadioButton
+            android:id="@+id/showArticlesRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Articles" />
+
+        <RadioButton
+            android:id="@+id/showMasterClassesRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Master Classes" />
+    </RadioGroup>
+
+    <!-- Горизонтальный скрол с отображением статей на выбор -->
+    <HorizontalScrollView
+        android:id="@+id/articlesHorizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filterRadioGroup">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Здесь добавьте элементы, представляющие статьи на выбор -->
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Еще один горизонтальный скрол для списка статей -->
+    <HorizontalScrollView
+        android:id="@+id/articlesListHorizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/articlesHorizontalScrollView">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Здесь добавьте элементы, представляющие список статей -->
+        </LinearLayout>
+    </HorizontalScrollView>
+</RelativeLayout>

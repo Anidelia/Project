@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PRO_IT_Project</string>
+    <string name="title_activity_bottom_navigation">Bottom_Navigation</string>
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_notifications">Notifications</string>
+</resources>
